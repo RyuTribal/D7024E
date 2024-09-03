@@ -1,0 +1,9 @@
+name: kademlia
+services:
+  app:
+    image: kademlia-dht:latest
+    command: ["sh", "-c", "while :; do sleep 1; done"]
+    deploy:
+      replicas: 50
+    ports:
+      - "8000-8049:80"
